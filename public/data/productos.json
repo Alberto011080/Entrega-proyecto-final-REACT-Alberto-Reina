@@ -1,0 +1,111 @@
+[
+    {
+        "id": 1,
+        "name": "The Mandrake Project",
+        "artista": "Bruce Dickinson" ,
+        "price": 12.99,
+        "stock": 25,
+        "img": "01.jpg"
+
+    },
+    
+    {
+        "id": 2,
+        "name": "Invincible Shield",
+        "artista": "Judas Priest" ,
+        "price": 18.99,
+        "stock": 25,
+        "img": "02.jpg"
+
+    },
+    {
+        "id": 3,
+        "name": "Be Right Here",
+        "artista": "Blackberry Smoke",
+        "price": 14.99,
+        "stock": 20,
+        "img": "03.jpg"
+
+    },
+    {
+        "id": 4,
+        "name": "Back is Black",
+        "artista": "AC/DC",
+        "price": 32.99,
+        "stock": 19,
+        "img": "04.jpg"
+
+    },
+    {
+        "id": 5,
+        "name": "Highway To Hell",
+        "artista": "AC/DC",
+        "price": 32.99 ,
+        "stock": 20 ,
+        "img": "05.jpg"
+
+    },
+    {
+        "id": 6,
+        "name": "Jar Of Flies",
+        "artista": "Alice in Chains",
+        "price": 22.99 ,
+        "stock": 10,
+        "img": "06.jpg"
+
+    },
+    {
+        "id": 7,
+        "name": "The Catalyst",
+        "artista": "Amaranthe",
+        "price": 15.99,
+        "stock": 5 ,
+        "img": "07.jpg"
+
+    },
+    {
+        "id": 8,
+        "name": "Against The Wings" ,
+        "artista": "Revolution Saints",
+        "price": 16.99,
+        "stock": 10,
+        "img": "08.jpg"
+
+    },
+    {
+        "id":9 ,
+        "name": "Vault Of Horrors",
+        "artista": "Aborted",
+        "price": 17.99,
+        "stock": 5,
+        "img":"09.jpg" 
+
+    },
+    {
+        "id": 10,
+        "name": "Inspiratio Profanus",
+        "artista": "Dimmu Borgir",
+        "price": 26.05,
+        "stock":20,
+        "img": "10.jpg"
+
+    },
+    {
+        "id":11 ,
+        "name":"Hell, Fire and Damnation (CD)" ,
+        "artista":"Saxon",
+        "price": 17.99,
+        "stock": 25,
+        "img": "11.jpg"
+
+    },
+    {
+        "id": 12,
+        "name": "666" ,
+        "artista": "Cobra Spell",
+        "price":23.21 ,
+        "stock": 10,
+        "img": "12.jpg"
+
+    }
+]
