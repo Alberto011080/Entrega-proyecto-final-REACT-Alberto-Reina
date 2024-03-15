@@ -1,10 +1,11 @@
 import React from 'react';
 import {useState, useEffect} from "react"
 import ItemList from "./ItemList"
+
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('./data/productos.json')
+        fetch('../data/productos.json')
             .then(response => response.json())
             .then(prods => {
                 setProducts(prods)

@@ -3,7 +3,7 @@ import React from "react";
 const Item = ({ product }) => {
   return (
     <div className=" max-w-xs mx-auto bg-gray-200 p-3 rounded-md shadow-md">
-        <img src={`./img/${product.img}`} alt={`Imagen de ${product.name}`} />
+        <img src={`../img/${product.img}`} alt={`Imagen de ${product.name}`} />
         <h2 className="text-lg font-semibold  mb-2">{product.name} {product.description}</h2>
         <p className="text-gray-700 mb-2 font-semibold">Artista: {product.artista}</p>
         <p className="text-gray-700 mb-2">Stock: {product.stock}</p>
