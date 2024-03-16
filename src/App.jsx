@@ -17,8 +17,7 @@ import NotFound from "./components/NotFound"
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-          
+      <Routes>        
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:cid" element = {<ItemListContainer/>} />
           <Route path="/product/:pid" element = {<ItemDetailsContainer/>}/>

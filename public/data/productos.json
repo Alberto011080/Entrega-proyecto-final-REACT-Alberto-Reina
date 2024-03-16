@@ -5,7 +5,8 @@
         "artista": "Bruce Dickinson" ,
         "price": 12.99,
         "stock": 25,
-        "img": "01.jpg"
+        "img": "01.jpg",
+        "category" : "novedad"
 
     },
     
@@ -15,7 +16,8 @@
         "artista": "Judas Priest" ,
         "price": 18.99,
         "stock": 25,
-        "img": "02.jpg"
+        "img": "02.jpg",
+        "category" : "novedad"
 
     },
     {
@@ -24,7 +26,8 @@
         "artista": "Blackberry Smoke",
         "price": 14.99,
         "stock": 20,
-        "img": "03.jpg"
+        "img": "03.jpg",
+        "category" : "novedad"
 
     },
     {
@@ -33,7 +36,8 @@
         "artista": "AC/DC",
         "price": 32.99,
         "stock": 19,
-        "img": "04.jpg"
+        "img": "04.jpg",
+        "category" : "reedicion"
 
     },
     {
@@ -42,7 +46,8 @@
         "artista": "AC/DC",
         "price": 32.99 ,
         "stock": 20 ,
-        "img": "05.jpg"
+        "img": "05.jpg",
+        "category" : "reedicion"
 
     },
     {
@@ -60,7 +65,8 @@
         "artista": "Amaranthe",
         "price": 15.99,
         "stock": 5 ,
-        "img": "07.jpg"
+        "img": "07.jpg",
+        "category" : "novedad"
 
     },
     {
@@ -69,7 +75,8 @@
         "artista": "Revolution Saints",
         "price": 16.99,
         "stock": 10,
-        "img": "08.jpg"
+        "img": "08.jpg",
+        "category" : "novedad"
 
     },
     {
@@ -78,7 +85,8 @@
         "artista": "Aborted",
         "price": 17.99,
         "stock": 5,
-        "img":"09.jpg" 
+        "img":"09.jpg" ,
+        "category" : "novedad"
 
     },
     {
@@ -96,7 +104,8 @@
         "artista":"Saxon",
         "price": 17.99,
         "stock": 25,
-        "img": "11.jpg"
+        "img": "11.jpg",
+        "category" : "novedad"
 
     },
     {
@@ -105,7 +114,38 @@
         "artista": "Cobra Spell",
         "price":23.21 ,
         "stock": 10,
-        "img": "12.jpg"
+        "img": "12.jpg",
+        "category" : "novedad"
+
+    },
+    {
+        "id": 13,
+        "name": "Criatura" ,
+        "artista": "Non Servium",
+        "price":9.99 ,
+        "stock": 3,
+        "img": "13.jpg",
+        "category" : "novedad"
+
+    },
+    {
+        "id": 14,
+        "name": "The Best Of 1980-1990" ,
+        "artista": "U2",
+        "price":8.99 ,
+        "stock": 15,
+        "img": "14.jpg",
+        "category" : "reedicion"
+
+    },
+    {
+        "id": 15,
+        "name": "(What´s the Story)Morning Glory?" ,
+        "artista": "Oasis",
+        "price":10 ,
+        "stock": 15,
+        "img": "15.jpg",
+        "category" : "reedicion"
 
     }
 ]
