@@ -12,15 +12,16 @@ function ItemDetailsContainer(props) {
         fetch('../data/productos.json')
         .then(Response => Response.json())
         .then(productos => {
+            
             const prod = productos.find(producto => producto.id == pid)
             if (prod)
                 setItem(prod)
         })
 
 
-    })
+    },[])
     return (
-        <div className='fixed w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
+        <div className='fixed w-full h-full flex justify-center items-center bg-black bg-opacity-30'>
            <ItemDetail item ={item}/>
         </div>
     );

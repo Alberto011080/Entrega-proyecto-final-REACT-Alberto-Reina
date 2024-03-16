@@ -22,8 +22,8 @@ const ItemListContainer = () => {
             .catch((error) => console.log(error))
     }, [cid])
     return (
-        <div>
-            <ItemList products={products} />
+        <div className='flex flex-wrap gap-2'>
+            <ItemList  products={products} />
         </div>
     )
 }
