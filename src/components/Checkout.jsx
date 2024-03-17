@@ -8,7 +8,7 @@ function Checkout(props) {
         const datForm = new FormData(formRef.current) //paso de un formulario HTML a un objeto iterador de java 
         const data = Object.fromEntries(datForm) //paso un objeto iterator a un objeto simple
         console.log(data)
-        e.target.reset() //es el disparador del evento. Resetea el evento
+        e.target.reset() //es el disparador del evento. Resetea el evento una vez cargado 
     }
     return (
         <div className='max-w-md mx-auto p-6 mt-4 mb-6 bg-gray-200 rounded-md shadow-md'>

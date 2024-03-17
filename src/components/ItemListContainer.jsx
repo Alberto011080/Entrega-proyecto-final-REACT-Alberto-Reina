@@ -6,14 +6,16 @@ import ItemList from "./ItemList"
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const {cid} = useParams ()
-    console.log(cid)
+
+
+   
     useEffect(() => {
         fetch('../data/productos.json')
             .then(response => response.json())
             .then(prods => {
                 if(cid){
-                    const productos = prods.filter(prod => prod.category == cid)
-                    setProducts(productos)
+                    const productosFiltrados = prods.filter(prod => prod.category == cid)
+                    setProducts(productosFiltrados)
                 }else{
                     setProducts(prods)
                 }
@@ -21,9 +23,10 @@ const ItemListContainer = () => {
             })
             .catch((error) => console.log(error))
     }, [cid])
+    
     return (
         <div className='flex flex-wrap gap-2'>
-            <ItemList  products={products} />
+            <ItemList  products={products} plantilla="Item"/>
         </div>
     )
 }

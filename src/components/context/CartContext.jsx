@@ -22,7 +22,7 @@ export const CarritoProvider = (props) => { //Forma de recibir propiedades si fu
         if(isInCart (item.id)){
             const indice = carrito.findIndex (prod => prod.id === item.id)
             const aux = [...carrito]
-            aux[indice].quantity = quantity
+            aux[indice].quantity = cantidad
             setCarrito (aux)
 
         }else{
@@ -64,7 +64,7 @@ export const CarritoProvider = (props) => { //Forma de recibir propiedades si fu
 
 //Me da el total del carrito. Multiplica cada precio del producto por cantidad y lo suma.
     const totalPrice = () => {
-    return carrito.reduce((acum, prod) => acum += (prod.quantity * price, 0))
+    return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price), 0)
     }
 
     console.log(carrito)

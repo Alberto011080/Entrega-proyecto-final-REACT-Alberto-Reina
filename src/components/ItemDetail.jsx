@@ -1,7 +1,7 @@
 import React from "react";
 import { useCounter } from "./hooks/useCounter";
 import { Link } from "react-router-dom";
-import { useCarritoContext} from "./context/CartContext";
+import { useCarritoContext } from './context/CartContext';
 
 function ItemDetail({ item }) {
   const {addItem}  = useCarritoContext()
