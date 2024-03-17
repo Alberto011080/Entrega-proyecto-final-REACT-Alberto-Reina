@@ -1,15 +1,18 @@
 import React from 'react';
 import  {FontAwesomeIcon}  from "@fortawesome/react-fontawesome"
 import  {faShoppingCart}  from "@fortawesome/free-solid-svg-icons"
+import { useCarritoContext } from './context/CartContext';
 
 
-const CartWidget = () => {
+  const CartWidget = () => {
+    const { getItemquantity } = useCarritoContext()
     return (
-      
-            <button className="bg-teal-500 text-white px-4 py-2 rounded-xl flex items-center">
+       
+            <button className="bg-gray text-white px-4 py-auto flex items-center hover:bg-gray-900 rounded-full ">
                 <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
-                <span>0</span>
+                <span>{getItemquantity()}</span>
             </button>       
+      
     )
 }
 

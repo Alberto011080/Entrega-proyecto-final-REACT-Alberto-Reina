@@ -9,8 +9,8 @@ import Cart from "./components/Cart"
 import Checkout from "./components/Checkout"
 import ItemDetailsContainer from "./components/ItemDetailsContainer 2"
 import NotFound from "./components/NotFound"
-import {CarritoProvider}  from "./components/context/CartContex.jsx"
-
+import {CarritoProvider}  from "./components/context/CartContext.jsx"
+//Esta entre corchetes porque no tiene un export por default... en principio era un js
 
 
 

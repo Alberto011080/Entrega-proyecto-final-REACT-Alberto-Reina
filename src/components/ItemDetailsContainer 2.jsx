@@ -27,4 +27,4 @@ function ItemDetailsContainer(props) {
     );
 }
 
-export default ItemDetailsContainer;
+export default ItemDetailsContainer; 

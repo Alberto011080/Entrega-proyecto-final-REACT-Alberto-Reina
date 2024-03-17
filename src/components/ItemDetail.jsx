@@ -1,12 +1,16 @@
 import React from "react";
 import { useCounter } from "./hooks/useCounter";
 import { Link } from "react-router-dom";
+import { useCarritoContext} from "./context/CartContext";
 
 function ItemDetail({ item }) {
+  const {addItem}  = useCarritoContext()
   const { count, increment, decrement, reset } = useCounter(1, item.stock, 1);
+
   const handleAddToCart = () => {
-    console.log(`estoy comprando ${count} de ${item.name}`)
-    console.log("Producto agregado al carrito")
+    addItem(item, count)
+    // console.log(`estoy comprando ${count} de ${item.name}`)
+    // console.log("Producto agregado al carrito")
 }
 
   return (
