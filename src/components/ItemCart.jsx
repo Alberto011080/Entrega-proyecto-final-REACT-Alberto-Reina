@@ -8,7 +8,7 @@ function ItemCart({product}) {
     return (
         <div className='flex items-center p-4 border-gray-300'>
             <div className='mr-4'>
-                <img src={`../img/${product.img}`} alt={`Imagen de ${product.name}`} className="w-24 h-24 object-cover" />
+                <img src={`${product.img}`} alt={`Imagen de ${product.name}`} className="w-24 h-24 object-cover" />
             </div>
             <div className='flex-1'>
                 <h3 className='text-lg font-semibold'>{product.name} {product.artista} </h3>

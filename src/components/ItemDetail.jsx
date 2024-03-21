@@ -20,7 +20,7 @@ function ItemDetail({ item }) {
       </Link>
       <img
         className="w-full h-64 objetc-cover mb-6"
-        src={`../public/img/${item.img}`}
+        src={`${item.img}`}
         alt={`Imagen de ${item.name}`}
       />
 

@@ -21,7 +21,7 @@ const ItemListContainer = () => {
                 }
                 
             })
-            .catch((error) => console.log(error))
+            
     }, [cid])
     
     return (
