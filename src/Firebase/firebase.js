@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, doc,  addDoc, getDocs, getDoc} from 'firebase/firestore'
+import {getFirestore, collection, doc, addDoc, getDocs, getDoc, updateDoc, deleteDoc} from 'firebase/firestore'
 
 
 const firebaseConfig = {
@@ -30,7 +30,7 @@ const bdd = getFirestore()
     */
 
 //Crear productos
-//^Acabo de ocultar los objetos pasados manualmente
+
 
 // console.log(prods)
 const prods = [
@@ -202,8 +202,9 @@ export const createProducts = async () => {
            
         })
 }  
+//!ESta funcion se ejecuta abajo una sola vez... por eso esta bloqueada luego
 
-// createProducts()
+// createProducts() 
 
 //Obtener productos
 export const  getProducts = async () => {
@@ -212,11 +213,61 @@ export const  getProducts = async () => {
     return items
     
 }
+//Obtener un solo producto
 
 export const  getProduct = async (id) => {
-    const producto = await getDocs (doc(bdd, "productos", id))
+    const producto = await getDoc (doc(bdd, "productos", id))
     const item= {...producto.data(), id: producto.id}
     return item
     
 }
-getProducts()
+// getProducts()
+//getProduct()
+
+
+//Actualizar Producto
+
+export const updateProduct = async (id, info) => {
+    const respuesta = await updateDoc(doc(bdd, "productos", id),info)
+    return respuesta
+}
+
+//eliminar producto
+
+export const deleteProduct = async (id) => {
+    const respuesta = await deleteDoc(doc(bdd, "productos", id))
+    return respuesta
+}
+
+
+//^Actualizar producot
+//^ updateProduct("3BTC57VhcjUaCjY1zOfk", {
+//     "name":"Hell, Fire and Damnation (CD)" ,
+//     "artista":"Saxon",
+//     "price": 20,
+//     "stock": 25,
+//     "img": "https://firebasestorage.googleapis.com/v0/b/react-60225-2024.appspot.com/o/11.jpg?alt=media&token=ea4dfc27-7f5c-437f-abd9-bc3990cdc7c4",
+//     "category" : "novedad"
+// }).then(rta => console.log(rta))
+
+
+//^Borrar Producto de la base de datos de firebase
+//^ deleteProduct("3BTC57VhcjUaCjY1zOfk")
+
+
+//CREATE AND READ Orden de Compra
+
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+    const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"),{
+        cliente: cliente,
+        items: carrito,
+        precioTotal: precioTotal,
+        fecha: fecha
+    })
+    return ordenCompra
+}
+
+export const getOrdenCompra = async (id) =>{
+    const ordenCompra = await getDoc (doc(bdd, "ordenesCompra", id))
+    const item = {...ordenCompra.data(), id : ordenCompra.id}
+}
