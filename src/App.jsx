@@ -1,4 +1,5 @@
 import "./style/App.css"
+import 'react-toastify/dist/ReactToastify.css';
 import  {BrowserRouter, Routes, Route} from "react-router-dom"
 import React from 'react'
 import Navbar from './components/NavBar'
@@ -11,7 +12,7 @@ import ItemDetailsContainer from "./components/ItemDetailsContainer 2"
 import NotFound from "./components/NotFound"
 import {CarritoProvider}  from "./components/context/CartContext.jsx"
 //Esta entre corchetes porque no tiene un export por default... en principio era un js
-
+import {ToastContainer} from 'react-toastify'
 
 
   function App() {
@@ -19,6 +20,7 @@ import {CarritoProvider}  from "./components/context/CartContext.jsx"
     <BrowserRouter>
       <CarritoProvider>
         <Navbar />
+        <ToastContainer />
         <Routes>        
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:cid" element = {<ItemListContainer/>} />

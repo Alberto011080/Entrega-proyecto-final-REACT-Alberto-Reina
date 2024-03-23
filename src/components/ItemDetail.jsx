@@ -2,15 +2,25 @@ import React from "react";
 import { useCounter } from "./hooks/useCounter";
 import { Link } from "react-router-dom";
 import { useCarritoContext } from './context/CartContext';
+import { toast } from "react-toastify"
 
 function ItemDetail({ item }) {
   const {addItem}  = useCarritoContext()
-  const { count, increment, decrement, reset } = useCounter(1, item.stock, 1);
+  const { count, increment, decrement, reset } = useCounter(1, item.stock, 1)
 
   const handleAddToCart = () => {
     addItem(item, count)
-    // console.log(`estoy comprando ${count} de ${item.name}`)
-    // console.log("Producto agregado al carrito")
+    toast.success(`📣 Producto agregado al carrito de forma correcta`,{
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark"
+})
+    
 }
 
   return (
@@ -19,10 +29,9 @@ function ItemDetail({ item }) {
             <button className="absolute top-4 right-4 text-gray-700 hover:text-gray-900">CERRAR</button>
       </Link>
       <img
-        className="w-full h-64 objetc-cover mb-6"
+        className="w-full h-full  objetc-cover mb-6"
         src={`${item.img}`}
-        alt={`Imagen de ${item.name}`}
-      />
+        alt={`Imagen de ${item.name}`} />
 
       <div className="text-center">
         <h2 className="text-2x1 font-bold mb-2">{item.name}</h2>
@@ -51,7 +60,7 @@ function ItemDetail({ item }) {
               Reset
             </button>
             <button
-              className="bg-indigo-500 text-white px-4 py-2 rounded"
+              className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-red-800"
               onClick={handleAddToCart}
             >
               Agregar al carrito
@@ -60,7 +69,7 @@ function ItemDetail({ item }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default ItemDetail;
